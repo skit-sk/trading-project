@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Scanner | Pattern Screener</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text2: #8b949e;
+      --green: #3fb950;
+      --red: #f85149;
+      --accent: #58a6ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--green), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--text2); margin-bottom: 2rem; }
+    .nav { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    .nav a {
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      background: var(--card);
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+    .nav a:hover { border-color: var(--accent); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .card .ticker {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .card .company { color: var(--text2); font-size: 0.875rem; margin-bottom: 0.5rem; }
+    .card .price { font-size: 1.5rem; margin: 0.75rem 0; font-weight: 600; }
+    .card .change { font-size: 0.875rem; }
+    .card .pattern { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text2); }
+    .positive { color: var(--green); }
+    .negative { color: var(--red); }
+    .badge {
+      display: inline-block;
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--green);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+    .badge.bearish { background: rgba(248, 81, 73, 0.15); color: var(--red); }
+    .section { margin-bottom: 2rem; }
+    .section h2 { margin-bottom: 1rem; font-size: 1.25rem; }
+    footer { margin-top: 3rem; color: var(--text2); font-size: 0.75rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>🕯️ Candlestick Scanner</h1>
+  <p class="subtitle">Real-time pattern scanning: S&P 100, Crypto, Forex</p>
+  
+  <div class="nav">
+    <a href="#stocks">📈 Stocks</a>
+    <a href="#crypto">💎 Crypto</a>
+    <a href="#patterns">🔍 Patterns</a>
+  </div>
+
+  <div class="section">
+    <h2>📈 Top Stocks</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="ticker">AAPL</div>
+        <div class="company">Apple Inc.</div>
+        <div class="price">$169.58</div>
+        <div class="change positive">+2.34%</div>
+        <div class="pattern">Pattern: <span class="badge">Engulfing (Bullish)</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">NVDA</div>
+        <div class="company">NVIDIA Corp.</div>
+        <div class="price">$875.28</div>
+        <div class="change negative">-1.21%</div>
+        <div class="pattern">Pattern: <span class="badge bearish">Doji</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">MSFT</div>
+        <div class="company">Microsoft</div>
+        <div class="price">$412.33</div>
+        <div class="change positive">+0.87%</div>
+        <div class="pattern">Pattern: <span class="badge">Morning Star</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">GOOGL</div>
+        <div class="company">Alphabet</div>
+        <div class="price">$174.92</div>
+        <div class="change positive">+1.56%</div>
+        <div class="pattern">Pattern: <span class="badge">Hammer</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">META</div>
+        <div class="company">Meta Platforms</div>
+        <div class="price">$502.15</div>
+        <div class="change negative">-0.45%</div>
+        <div class="pattern">Pattern: <span class="badge bearish">Shooting Star</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">TSLA</div>
+        <div class="company">Tesla Inc.</div>
+        <div class="price">$241.89</div>
+        <div class="change positive">+3.12%</div>
+        <div class="pattern">Pattern: <span class="badge">3 White Soldiers</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💎 Crypto</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="ticker">BTC</div>
+        <div class="company">Bitcoin</div>
+        <div class="price">$84,250</div>
+        <div class="change positive">+1.84%</div>
+        <div class="pattern">Pattern: <span class="badge">Bullish Engulfing</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">ETH</div>
+        <div class="company">Ethereum</div>
+        <div class="price">$1,920</div>
+        <div class="change positive">+2.15%</div>
+        <div class="pattern">Pattern: <span class="badge">Morning Star</span></div>
+      </div>
+      <div class="card">
+        <div class="ticker">SOL</div>
+        <div class="company">Solana</div>
+        <div class="price">$142.50</div>
+        <div class="change negative">-0.89%</div>
+        <div class="pattern">Pattern: <span class="badge bearish">Evening Star</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Last updated: 2026-04-20 18:30 UTC</p>
+    <p>Data: Yahoo Finance | Built with Trading Project</p>
+  </footer>
+</body>
+</html>
