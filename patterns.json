@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "patterns": {
+    "reversal_bullish": [
+      {"code": "CDLHAMMER", "name": "Hammer"},
+      {"code": "CDLENGULFING", "name": "Bullish Engulfing"},
+      {"code": "CDLMORNINGSTAR", "name": "Morning Star"},
+      {"code": "CDLPIERCING", "name": "Piercing"},
+      {"code": "CDL3WHITESOLDIERS", "name": "Three White Soldiers"},
+      {"code": "CDLDOJI", "name": "Doji (bullish)"},
+      {"code": "CDLDRAGONFLYDOJI", "name": "Dragonfly Doji"}
+    ],
+    "reversal_bearish": [
+      {"code": "CDLHANGINGMAN", "name": "Hanging Man"},
+      {"code": "CDLENGULFING", "name": "Bearish Engulfing"},
+      {"code": "CDLEVENINGSTAR", "name": "Evening Star"},
+      {"code": "CDLDARKCLOUDCOVER", "name": "Dark Cloud Cover"},
+      {"code": "CDL3BLACKCROWS", "name": "Three Black Crows"},
+      {"code": "CDLSHOOTINGSTAR", "name": "Shooting Star"},
+      {"code": "CDLGRAVESTONEDOJI", "name": "Gravestone Doji"}
+    ],
+    "continuation": [
+      {"code": "CDLTASUKIGAP", "name": "Tasuki Gap"},
+      {"code": "CDLSTICKSANDWICH", "name": "Stick Sandwich"},
+      {"code": "CDLTHRUSTING", "name": "Thrusting"},
+      {"code": "CDLINMELEE", "name": "In Melee"}
+    ]
+  },
+  "indicators": {
+    "momentum": ["RSI", "MACD", "STOCH"],
+    "trend": ["SMA", "EMA", "ADX"],
+    "volatility": ["BBANDS", "ATR"],
+    "volume": ["OBV", "AD"]
+  }
+}
