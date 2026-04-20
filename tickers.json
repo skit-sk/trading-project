@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-04-20",
+
+  "stocks": {
+    "sp500": ["AAPL","MSFT","GOOGL","AMZN","NVDA","META","TSLA","BRK.B","JPM","JNJ","V","UNH","HD","PG","MA","DIS","PYPL","NFLX","ADBE","CRM","INTC"],
+    "ndx100": ["AAPL","MSFT","AMZN","NVDA","META","TSLA","GOOGL","GOOG","BRK.B","AVGO","COST","PEP","ADBE","CSCO","ABBV","CRM","TXN","QCOM","INTU","AMAT"],
+    "moex": ["SBER","GAZP","LKOH","YNDX","MGNT","VTBR","AFKS","POLY","NLMK","SNGS"]
+  },
+
+  "crypto": {
+    "top10": ["bitcoin","ethereum","tether","binancecoin","solana","ripple","usd-coin","cardano","dogecoin","avalanche-2"],
+    "defi": ["uniswap","aave","maker","curve-dao-token","sushi"]
+  },
+
+  "indexes": {
+    "usa": ["SPY","QQQ","DIA","IWM","VXX"],
+    "crypto": ["BTC-USD","ETH-USD","SOL-USD"],
+    "forex": ["RUB=X","EUR=X"]
+  }
+}
